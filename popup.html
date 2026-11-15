@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>🎨 فونت‌چنجر</h1>
+    <label class="switch">
+      <input type="checkbox" id="toggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div id="panel">
+    <div class="section">
+      <label class="label">فونت:</label>
+      <div class="font-select">
+        <button class="font-btn active" data-font="Vazirmatn">وزیرمتن</button>
+        <button class="font-btn" data-font="custom">فونت آپلودی</button>
+      </div>
+    </div>
+
+    <div class="section" id="upload-section" style="display:none;">
+      <label class="label">آپلود فونت (ttf, otf, woff, woff2):</label>
+      <input type="file" id="font-file" accept=".ttf,.otf,.woff,.woff2" />
+      <p id="file-name" class="hint"></p>
+    </div>
+
+    <div class="section">
+      <label class="label">ضخامت فونت:</label>
+      <input type="range" id="weight" min="100" max="900" step="100" value="400" />
+      <span id="weight-val" class="hint">400 (نرمال)</span>
+    </div>
+
+    <button id="reset" class="reset">🔄 بازگشت به حالت پیش‌فرض</button>
+    <p class="footer">ساخته‌شده با ❤️</p>
+  </div>
+</body>
+<script src="popup.js"></script>
+</html>
